@@ -1,0 +1,363 @@
+:root {
+
+    /**
+     * colors
+     */
+  
+    --united-nations-blue: hsl(214, 56%, 58%);
+    --bright-navy-blue: hsl(214, 57%, 51%);
+    --spanish-gray: hsl(0, 0%, 60%);
+    --black-coral: hsl(113, 8%, 42%);
+    --oxford-blue: hsl(208, 97%, 12%);
+    --yale-blue: hsl(214, 72%, 33%);
+    --blue-ncs: hsl(197, 100%, 36%);
+    --gunmetal: hsl(206, 34%, 20%);
+    --gainsboro: hsl(0, 0%, 88%);
+    --cultured: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --onyx: hsl(0, 0%, 25%);
+    --jet: hsl(0, 0%, 20%);
+    --violet: hsl(205, 36%, 17%);
+    --orange:#EE7C2C;
+    --orange2:hsla(40, 100%, 78%, 0.7);
+  
+    /**
+     * typography
+     */
+  
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-montserrat: "Montserrat", sans-serif;
+  
+    --fs-1: calc(20px + 3.5vw);
+    --fs-2: calc(18px + 1.6vw);
+    --fs-3: calc(16px + 0.45vw);
+    --fs-4: 15px;
+    --fs-5: 14px;
+    --fs-6: 13px;
+    --fs-7: 12px;
+    --fs-8: 11px;
+  
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+  
+    /**
+     * transition
+     */
+  
+    --transition: 0.25s ease-in-out;
+  
+    /**
+     * spacing
+     */
+  
+    --section-padding: 40px;
+  
+    /**
+     * border-radius
+     */
+  
+    --radius-15: 15px;
+    --radius-25: 25px;
+  
+  }
+
+
+/* General Styles */
+body {
+    font-family: var(--ff-montserrat);
+    margin: 0;
+    padding: 0;
+    background: url(nelayan2.jpg);
+    background-color: #f1f1f1;
+    background-size: cover;
+    color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Konten utama akan fleksibel */
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(to right, #2C3E50, #34495E); /* Gradient biru tua */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+
+}
+
+header h1 {
+    margin: 1%;
+    font-size: 2.5em;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0; 
+    list-style: none;
+    justify-content: center;
+}
+nav ul {
+
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: all 0.25s ease-in-out;
+}
+
+nav ul li a:hover {
+    background-color: #004080;
+    color: #FFA500;
+    transform: scale(1.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px); /* Efek angkat saat hover */
+    transition: background-color 0.25s ease-in-out, color 1s ease-in-out;
+}
+
+nav ul li a.active {
+
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+
+
+main {
+    padding: var(--section-padding);
+    background-color: var(--cultured);
+    border-radius: var(--radius-25);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    max-width: 1200px;
+    height: auto;
+}
+
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 5%;
+}
+
+h2 {
+    color: #212529 !important;
+    margin-top: 0;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e2e2e;
+    border: #004080;
+}
+
+form input, form select, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+
+
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #2e2e2e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: var(--fs-5);
+}
+table th, table td {
+    text-align: center;
+    padding: 12px;
+    word-wrap: break-word; /* Agar teks panjang tidak meluas */
+}
+
+table th {
+    background-color: var(--blue-ncs);
+    color: var(--white);
+}
+table tr:nth-child(even) {
+    background-color: var(--gainsboro);
+}
+table tr:hover {
+    background-color: var(--spanish-gray);
+    cursor: pointer;
+}
+
+
+a {
+    color: #2e2e2e;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #212529 !important;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.container {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 30px auto; /* Kurangi jarak vertikal */
+    border-radius: 20px;
+    padding: 20px; /* Kurangi padding agar tidak memakan banyak ruang */
+    max-width: 95%; /* Pastikan tabel tidak menyempit pada perangkat kecil */
+}
+
+
+canvas {
+    margin: 20px auto;
+    display: block;
+    max-width: 600px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* tabel nelayan*/
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+    .container {
+        margin: 20px auto; /* Margin lebih kecil untuk perangkat kecil */
+        padding: 10px;
+    }
+    table {
+        font-size: var(--fs-6); /* Kurangi ukuran font di layar kecil */
+    }
+}
+
+/* Default styles for all devices */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+    main {
+        padding: 10px;
+    }
+}
+
+/* Styles for mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    main {
+        padding: 5px;
+    }
+}
+
+/* Untuk perangkat mobile, footer tetap di bagian bawah viewport */
+@media (max-width: 767px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    main {
+        padding-bottom: 60px; /* Sesuaikan dengan tinggi footer */
+    }
+}

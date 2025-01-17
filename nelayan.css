@@ -1,0 +1,293 @@
+:root {
+
+    /**
+     * colors
+     */
+  
+    --united-nations-blue: hsl(214, 56%, 58%);
+    --bright-navy-blue: hsl(214, 57%, 51%);
+    --spanish-gray: hsl(0, 0%, 60%);
+    --black-coral: hsl(113, 8%, 42%);
+    --oxford-blue: hsl(208, 97%, 12%);
+    --yale-blue: hsl(214, 72%, 33%);
+    --blue-ncs: hsl(197, 100%, 36%);
+    --gunmetal: hsl(206, 34%, 20%);
+    --gainsboro: hsl(0, 0%, 88%);
+    --cultured: hsl(0, 0%, 98%);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --onyx: hsl(0, 0%, 25%);
+    --jet: hsl(0, 0%, 20%);
+    --violet: hsl(205, 36%, 17%);
+    --orange:#EE7C2C;
+    --orange2:hsla(40, 100%, 78%, 0.7);
+  
+    /**
+     * typography
+     */
+  
+    --ff-poppins: "Poppins", sans-serif;
+    --ff-montserrat: "Montserrat", sans-serif;
+  
+    --fs-1: calc(20px + 3.5vw);
+    --fs-2: calc(18px + 1.6vw);
+    --fs-3: calc(16px + 0.45vw);
+    --fs-4: 15px;
+    --fs-5: 14px;
+    --fs-6: 13px;
+    --fs-7: 12px;
+    --fs-8: 11px;
+  
+    --fw-500: 500;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+  
+    /**
+     * transition
+     */
+  
+    --transition: 0.25s ease-in-out;
+  
+    /**
+     * spacing
+     */
+  
+    --section-padding: 40px;
+  
+    /**
+     * border-radius
+     */
+  
+    --radius-15: 15px;
+    --radius-25: 25px;
+  
+  }
+
+/* General Styles */
+body {
+    font-family: var(--ff-montserrat);
+    margin: 0;
+    padding: 0;
+    background: url(nelayan2.jpg);
+    background-color: #f1f1f1;
+    background-size: cover;
+    color: #333;
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, Main, Footer */
+    min-height: 100vh; /* Memastikan body mengambil tinggi penuh viewport */
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+header h1 {
+    margin: 1%;
+    font-size: 2.5em;
+}
+
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    background: linear-gradient(to right, #2C3E50, #34495E); /* Gradient biru tua */
+    padding: 0;
+    margin: 2%;
+    display: flex;
+    justify-content: center;
+    background-color: #0056b3;
+    border-radius: 30px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #004080;
+}
+
+nav ul li a.active {
+    background-color: #003366;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.8); /* Putih dengan transparansi 80% */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    margin-bottom: 7%;
+}
+
+h2 {
+    color: #000000;
+    margin-top: 0;
+    margin: 1% auto;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: #ccc;
+
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+}
+
+form input, form select, form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    color: #000000;
+}
+
+table th {
+    background-color: #007BFF;
+    color: white;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
+/* Default styles for all devices */
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for tablets (768px - 1024px) */
+@media (max-width: 1024px) {
+    body {
+        font-size: 14px;
+    }
+    main {
+        padding: 10px;
+    }
+}
+
+/* Styles for mobile devices (up to 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 12px;
+    }
+    h2 {
+        font-size: 1.5em;
+    }
+    main {
+        padding: 5px;
+    }
+}
+
+/* Untuk perangkat mobile, footer tetap di bagian bawah viewport */
+@media (max-width: 767px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    main {
+        padding-bottom: 60px; /* Sesuaikan dengan tinggi footer */
+    }
+}
